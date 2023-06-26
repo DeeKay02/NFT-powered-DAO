@@ -1,0 +1,24 @@
+{
+  "name": "nft-powered-dao",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DeeKay02/NFT-powered-DAO.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DeeKay02/NFT-powered-DAO/issues"
+  },
+  "homepage": "https://github.com/DeeKay02/NFT-powered-DAO#readme",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "hardhat": "^2.16.0"
+  }
+}
