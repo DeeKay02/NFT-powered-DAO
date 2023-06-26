@@ -34,5 +34,30 @@ interface ICryptoDevsNFT {
 }
 
 contract CryptoDevsDAO is Ownable {
-    // We will write contract code here
+    
+    struct Proposal {
+        uint256 nftTokenId;
+        uint256 deadline;
+        // yayVotes - number of yay votes for this proposal
+        uint256 yayVotes;
+        // nayVotes - number of nay votes for this proposal
+        uint256 nayVotes;
+        // executed - whether or not this proposal has been executed yet. Cannot be executed before the deadline has been exceeded.
+        bool executed;
+        // voters - a mapping of CryptoDevsNFT tokenIDs to booleans indicating whether that NFT has already been used to cast a vote or not
+        mapping(uint256 => bool) voters;
+    }
+
+    // Create a mapping of ID to Proposal
+    mapping(uint256 => Proposal) public proposals;
+    // Number of proposals that have been created
+    uint256 public numProposals;
+
+    IFakeNFTMarketplace nftMarketplace;
+    ICryptoDevsNFT cryptoDevsNFT;
+
+    enum Vote {
+    YAY, // YAY = 0
+    NAY // NAY = 1
+}
 }
