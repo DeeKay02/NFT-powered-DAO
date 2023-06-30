@@ -10,7 +10,7 @@ const { chains, publicClient } = configureChains([sepolia], [publicProvider()]);
 
 const { connectors } = getDefaultWallets({
   appName: "CryptoDevs DAO",
-  projectId: "ADD_YOUR_PROJECT_ID_HERE",
+  projectId: "47cbc3037cd5d8f835d076a0a84442b7",
   chains,
 });
 
@@ -28,3 +28,4 @@ export default function App({ Component, pageProps }) {
       </RainbowKitProvider>
     </WagmiConfig>
   );
+}
